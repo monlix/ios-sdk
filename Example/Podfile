@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'MonlixOfferwall_Example' do
+  pod 'MonlixOfferwall', :path => '../'
+
+  target 'MonlixOfferwall_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
