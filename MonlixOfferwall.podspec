@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'MonlixOfferWall'
+  s.name             = 'MonlixOfferwall'
   s.version          = '0.0.1'
   s.summary          = 'Offerwall for iOS games and apps monetization.'
   s.swift_version    = '4.0'
