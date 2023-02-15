@@ -1,0 +1,22 @@
+{
+  "name": "MonlixOfferwall",
+  "version": "0.1.0",
+  "summary": "A short description of MonlixOfferwall.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/miskoajkula/MonlixOfferwall",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "miskoajkula": "cofilicavujovic@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/miskoajkula/MonlixOfferwall.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "MonlixOfferwall/Classes/**/*"
+}

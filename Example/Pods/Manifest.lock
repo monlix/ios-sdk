@@ -1,0 +1,16 @@
+PODS:
+  - MonlixOfferwall (0.1.0)
+
+DEPENDENCIES:
+  - MonlixOfferwall (from `../`)
+
+EXTERNAL SOURCES:
+  MonlixOfferwall:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MonlixOfferwall: 1b71504aa170e949ce05c0306825f2d96e1eb5eb
+
+PODFILE CHECKSUM: afc3e0708b463a1c8e0c3e92af9a9211cd378e59
+
+COCOAPODS: 1.11.3
