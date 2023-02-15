@@ -17,7 +17,7 @@ MonlixOfferwall is available through [CocoaPods](https://cocoapods.org). To inst
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'MonlixOfferwall'
+pod 'MonlixOfferwall', '~> 0.0.1'
 ```
 
 ## Author
