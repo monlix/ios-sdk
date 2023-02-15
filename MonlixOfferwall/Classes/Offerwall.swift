@@ -34,6 +34,10 @@ class PrivacyGesture: UITapGestureRecognizer {
     var url = String()
 }
 
+private let OBJC_MALE: NSNumber = 0
+private let OBJC_FEMALE: NSNumber = 1
+private let OBJC_OTHER: NSNumber = 2
+
 public class MonlixOfferwall: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
     private var apiUrl = "https://offers.monlix.com"
@@ -45,6 +49,47 @@ public class MonlixOfferwall: UIViewController, WKUIDelegate, WKNavigationDelega
         webView.translatesAutoresizingMaskIntoConstraints = false
         return webView
     }()
+    
+  
+    @objc public func initObjC(appId: String, userId: String, subId: String? = nil, age: NSNumber? = nil, gender: NSNumber? = nil, zoneId: NSNumber? = nil  ) -> Any {
+        
+        apiUrl += "?appid=\(appId)"
+        apiUrl += "&userid=\(userId)"
+        if(subId != nil) {
+            apiUrl += "&subid=\(subId!)"
+        }
+        if(age != nil)  {
+            apiUrl += "&age=\(age!)"
+        }
+        if(gender != nil) {
+            var genderStr = ""
+            switch (gender) {
+            case OBJC_MALE:
+                genderStr = "MALE";
+            case OBJC_FEMALE:
+                genderStr = "FEMALE";
+            case OBJC_OTHER:
+                genderStr = "OBJC_OTHER";
+            case .none:
+                genderStr = "OTHER"
+            case .some(_):
+                genderStr = "OTHER"
+            }
+            print(genderStr)
+            apiUrl += "&gender=\(genderStr)"
+        }
+        if(zoneId != nil) {
+            apiUrl += "&zoneid=\(zoneId!)"
+        }
+        apiUrl += "&mobile=true"
+        
+        return true
+    }
+    
+    
+    public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nil, bundle: nil)
+    }
     
     public init(config: MonlixConfig) {
         apiUrl += "?appid=\(config.appId)"
